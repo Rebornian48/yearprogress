@@ -9,13 +9,15 @@ var bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Ag
 var current_date, end_year, new_year;
 var one_day_ms = 1000 * 60 * 60 * 24;
 current_date = new Date();
-end_year= new Date(current_date.getFullYear(), 11, 31);
+end_year = new Date(current_date.getFullYear(), 11, 31);
 new_year = new Date(current_date.getFullYear(), 00, 01);
-var pass = (Math.round(current_date.getTime() - new_year.getTime()) / (one_day_ms))+1;
-var res = (Math.round(end_year.getTime() - current_date.getTime()) / (one_day_ms));  
-var PassResult = pass.toFixed (0);
-var FinalResult = res.toFixed (0);
-var passPercentage = ((pass/(pass + res + 1)) * 100).toFixed(2);
+var pass = (Math.round(current_date.getTime() - new_year.getTime()) / (one_day_ms));
+console.log(pass);
+var res = (Math.round(end_year.getTime() - current_date.getTime()) / (one_day_ms) + 1);  
+console.log(res);
+var PassResult = pass.toFixed (2);
+var FinalResult = res.toFixed (2);
+var passPercentage = ((pass/(pass + res)) * 100).toFixed(2);
 
 var tanggal = newYear.getDate();
 var _hari = newYear.getDay();
@@ -44,8 +46,4 @@ var x = setInterval(function() {
     document.getElementById("persen").innerHTML = "Persentase : " + passPercentage + "%";
     document.getElementById("curr_num").innerHTML = "Tahun " + current_date.getFullYear() + " telah berjalan selama " + PassResult + " hari";
     document.getElementById("end_num").innerHTML = "Tahun " + current_date.getFullYear() + " berakhir dalam " + FinalResult + " hari";
-    if (t < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
 }, 1000);

@@ -32,4 +32,6 @@ document.getElementById("passed").innerText = PassResult;
 document.getElementById("remaining").innerText = RestResult;
 
 var passPercentage = ((pass/(pass + rest)) * 100).toFixed(2);
-document.getElementById("progress").innerText = passPercentage;
+document.getElementById("progress-1").innerText = passPercentage;
+document.getElementById("progress-2").innerText = passPercentage;
+document.getElementById("p-bar").classList.add("w-["+passPercentage+"%]");

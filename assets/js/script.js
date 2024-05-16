@@ -1,5 +1,5 @@
 //nextDate
-var nextYear =  new Date().getFullYear() + 1;
+var nextYear = new Date().getFullYear() + 1;
 var newYear = new Date(nextYear,0,1,0,0,0,0);
 
 //element
@@ -7,11 +7,20 @@ var hari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
 var bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
 
 //date
+var hariDepan = hari[newYear.getDay()];
 var tanggalDepan = newYear.getDate();
-var bulanDepan = newYear.getMonth();
+var bulanDepan = bulan[newYear.getMonth()];
 var tahunDepan = newYear.getFullYear();
+var tahunBaru = hariDepan + ", " + tanggalDepan + " " + bulanDepan + " " + tahunDepan;
 
+//new year response
+document.getElementById("next-year").innerText = nextYear;
+document.getElementById("next-newyear").innerText = tahunBaru;
 
+//countdown
+var one_day_ms = 1000 * 60 * 60 * 24;
+var current_date = new Date();
+console.log(current_date);
 
 //current date
 

@@ -36,43 +36,34 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-
-  <body class="bg-gray-900 text-white">
-    <div class="bg-gray-900">
-      <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
-        <h2 class="text-2xl font-bold leading-10 tracking-tight text-white">
-          Year Progress
-        </h2>
-        <p class="mt-6 max-w-2xl text-base leading-7 text-gray-300">
-          Created by Rebornian48
-        </p>
-        <div class="mt-20">
-          <div>
-            <dt class="text-base font-semibold leading-7 text-white">
-              Menuju tahun baru tahun <span id="next-year"></span>
-            </dt>
-            <dt class="text-base font-semibold leading-7 text-white">
-              Tahun baru akan jatuh pada tanggal <span id="next-newyear"></span>
-            </dt>
-            <div class="w-[15rem] rounded-full bg-gray-700">
-              <div
-                class="bg-green-500 h-full rounded-full text-white font-medium p-0.5 text-xs text-center"
-                id="p-bar"
-              >
-                <span id="progress-2"></span>%
-              </div>
-            </div>
-            <dt class="text-base font-semibold leading-7 text-white">
-              Progress tahun ini: <span id="progress-1"></span>% telah terlewati
-            </dt>
-            <dt class="text-base font-semibold leading-7 text-white">
-              Waktu tahun ini yang telah terlewati:
-              <span id="passed"></span> hari
-            </dt>
-            <dt class="text-base font-semibold leading-7 text-white">
-              Sisa waktu tahun ini: <span id="remaining"></span> hari
-            </dt>
+  <body class="text-white">
+    <div class="bg-gray-900 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:max-w-none">
+          <div class="text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Year Progress</h2>
+            <p class="mt-2 text-lg leading-8 text-gray-300">Created by Rebornian48</p>
+            <p class="mt-2 text-lg leading-8 text-gray-300">Inspired by yearsprogress.com</p>
+            <p class="mt-2 text-lg leading-8 text-gray-300">Menuju tahun baru tahun <span class="text-xl font-bold" id="next-year"></span></p>
           </div>
+          <dl class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+            <div class="flex flex-col bg-white/5 p-8">
+              <dt class="text-sm font-semibold leading-6 text-gray-300"> Tahun baru akan jatuh pada tanggal</dt>
+              <dd class="text-2xl font-semibold tracking-tight text-white"><span id="next-newyear"></span></dd>
+            </div>
+            <div class="flex flex-col bg-white/5 p-8">
+              <dt class="text-sm font-semibold leading-6 text-gray-300">Progress tahun ini</dt>
+              <dd class="text-3xl font-semibold tracking-tight text-white"><span id="progress-1"></span>%</dd>
+            </div>
+            <div class="flex flex-col bg-white/5 p-8">
+              <dt class="text-sm font-semibold leading-6 text-gray-300">Waktu yang telah terlewati</dt>
+              <dd class="text-3xl font-semibold tracking-tight text-white"><span id="passed"></span> hari</dd>
+              </div>
+            <div class="flex flex-col bg-white/5 p-8">
+              <dt class="text-sm font-semibold leading-6 text-gray-300">Sisa waktu tahun ini</dt>
+              <dd class="text-3xl font-semibold tracking-tight text-white"><span id="remaining"></span> hari</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </div>
